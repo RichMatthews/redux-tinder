@@ -1,0 +1,15 @@
+allUsers = [{id: 1}, {id:2}, {id:3}, {id: 4}, {id: 5}]
+likes = [{id: 1}, {id:3}, {id: 5}]
+// should return newQueue = [{id: 2}, {id: 4}]
+
+allUsers.map((user) => {
+	likes.map((pastUser) => {
+		if(user.id == pastUser.id){
+			return user
+		}
+    else {
+    
+    }
+	})
+
+})
