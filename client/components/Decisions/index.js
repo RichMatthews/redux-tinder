@@ -8,7 +8,7 @@ class Decisions extends React.Component {
     const { userLiked, userDisliked, user } = this.props;
     const allUsers = this.context.store.getState().users.allUsers;
     return(
-      <div className="container">
+      <div className="decisionContainer">
         <button onClick={() => userDisliked(allUsers[0])}>
           <img src={require('../../../images/redcross.png')} width="20px" height="20px"/>
         </button>
