@@ -4,7 +4,7 @@ var config = {
   authDomain: "redux-tinder.firebaseapp.com",
   databaseURL: "https://redux-tinder.firebaseio.com",
   projectId: "redux-tinder",
-  storageBucket: "",
+  storageBucket: "redux-tinder.appspot.com",
   messagingSenderId: "417349688199"
 };
 const fire = firebase.initializeApp(config);

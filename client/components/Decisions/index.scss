@@ -1,3 +1,40 @@
 .decisionContainer {
   display: flex;
 }
+
+.userLikedBtn {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.userDislikedBtn {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.userSuperlikedBtn {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.userLikedBtn img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.userDislikedBtn img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+}
+
+.userSuperlikedBtn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

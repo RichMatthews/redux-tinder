@@ -1,19 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+import createSagaMiddleware from 'redux-saga'
 import Main from './components/Main';
 import reducer from './redux/reducers';
+import mySaga from './redux/sagas';
+
+const sagaMiddleware = createSagaMiddleware()
 
 const store = createStore(
   reducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  applyMiddleware(sagaMiddleware)
 );
 function listener() {
   console.log(store.getState(), 'store state');
 }
 
 store.subscribe(listener);
+sagaMiddleware.run(mySaga)
 
 class Component extends React.Component{
   render(){
